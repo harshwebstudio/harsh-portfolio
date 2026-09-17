@@ -652,3 +652,85 @@ footer p {
     }
 
        }
+/* ================================
+   MOBILE MENU + CONTACT BUTTONS
+================================ */
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid #333;
+    color: #fff;
+    font-size: 22px;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        padding: 25px 5%;
+        background: rgba(8, 8, 8, 0.98);
+        border-bottom: 1px solid #242424;
+        z-index: 999;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .mobile-menu.active {
+        display: flex;
+    }
+
+    .mobile-menu a {
+        color: #aaa;
+        font-size: 16px;
+        padding: 12px 0;
+        border-bottom: 1px solid #1c1c1c;
+    }
+
+    .mobile-menu a:hover {
+        color: #fff;
+    }
+
+}
+
+
+/* SMALL PHONES */
+
+@media (max-width: 500px) {
+
+    .contact-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contact-buttons a {
+        width: 100%;
+        text-align: center;
+    }
+
+}
