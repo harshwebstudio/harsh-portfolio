@@ -64,4 +64,21 @@ document.addEventListener("DOMContentLoaded", () => {
             `© ${new Date().getFullYear()} Harsh — Web Designer`;
     }
 
-});
+});// Mobile menu
+const menuToggle = document.querySelector(".menu-toggle");
+const mobileMenu = document.querySelector(".mobile-menu");
+
+if (menuToggle && mobileMenu) {
+
+    menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("active");
+    });
+
+    document.querySelectorAll(".mobile-menu a").forEach(link => {
+
+        link.addEventListener("click", () => {
+            mobileMenu.classList.remove("active");
+        });
+
+    });
+}
