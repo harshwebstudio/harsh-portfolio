@@ -734,3 +734,57 @@ footer p {
     }
 
 }
+/* ================================
+   HECTO PROJECT GALLERY
+================================ */
+
+.hecto-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 8px;
+    overflow: hidden;
+}
+
+.hecto-gallery img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.hecto-gallery img:hover {
+    transform: scale(1.03);
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .hecto-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+        padding: 6px;
+    }
+
+    .hecto-gallery img {
+        height: 140px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .hecto-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .hecto-gallery img {
+        height: 220px;
+    }
+
+}
