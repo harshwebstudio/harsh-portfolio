@@ -788,3 +788,160 @@ footer p {
     }
 
 }
+/* ================================
+   PREMIUM SCROLL REVEAL ANIMATIONS
+================================ */
+
+.section {
+    opacity: 0;
+    transform: translateY(35px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ================================
+   HERO LOAD ANIMATION
+================================ */
+
+.hero-content {
+    animation: heroFadeUp 1s ease forwards;
+}
+
+.hero-number {
+    animation: heroNumberFade 1.2s ease 0.2s forwards;
+    opacity: 0;
+}
+
+@keyframes heroFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroNumberFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ================================
+   BUTTON HOVER
+================================ */
+
+.primary-btn,
+.secondary-btn,
+.nav-button {
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover,
+.nav-button:hover {
+    transform: translateY(-3px);
+}
+
+
+/* ================================
+   CARD HOVER
+================================ */
+
+.skill-card,
+.project-card {
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+
+/* ================================
+   PROJECT IMAGE ZOOM
+================================ */
+
+.project-card:hover .project-image {
+    transform: scale(1.02);
+}
+
+.project-image {
+    transition: transform 0.5s ease;
+}
+
+
+/* ================================
+   HECTO IMAGE HOVER
+================================ */
+
+.hecto-gallery img {
+    transition:
+        transform 0.4s ease,
+        filter 0.4s ease;
+}
+
+.hecto-gallery img:hover {
+    transform: scale(1.04);
+}
+
+
+/* ================================
+   SERVICE HOVER
+================================ */
+
+.service {
+    transition:
+        padding-left 0.3s ease,
+        background 0.3s ease;
+}
+
+.service:hover {
+    padding-left: 10px;
+}
+
+
+/* ================================
+   REDUCED MOTION
+================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+}
