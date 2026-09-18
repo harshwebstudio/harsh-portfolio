@@ -5,7 +5,10 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    // Smooth navigation
+    // ================================
+    // SMOOTH NAVIGATION
+    // ================================
+
     document.querySelectorAll('a[href^="#"]').forEach(link => {
 
         link.addEventListener("click", event => {
@@ -30,7 +33,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    // Reveal sections while scrolling
+    // ================================
+    // SCROLL REVEAL
+    // ================================
+
     const sections = document.querySelectorAll(".section");
 
     const observer = new IntersectionObserver(
@@ -40,6 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 if (entry.isIntersecting) {
                     entry.target.classList.add("show");
+                    observer.unobserve(entry.target);
                 }
 
             });
@@ -50,64 +57,47 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     );
 
-
     sections.forEach(section => {
         observer.observe(section);
     });
 
 
-    // Current year in footer
+    // ================================
+    // MOBILE MENU
+    // ================================
+
+    const menuToggle = document.querySelector(".menu-toggle");
+    const mobileMenu = document.querySelector(".mobile-menu");
+
+    if (menuToggle && mobileMenu) {
+
+        menuToggle.addEventListener("click", () => {
+            mobileMenu.classList.toggle("active");
+        });
+
+
+        document.querySelectorAll(".mobile-menu a").forEach(link => {
+
+            link.addEventListener("click", () => {
+                mobileMenu.classList.remove("active");
+            });
+
+        });
+
+    }
+
+
+    // ================================
+    // CURRENT YEAR
+    // ================================
+
     const footerText = document.querySelector("footer p");
 
     if (footerText) {
+
         footerText.textContent =
             `© ${new Date().getFullYear()} Harsh — Web Designer`;
+
     }
 
-});// Mobile menu
-const menuToggle = document.querySelector(".menu-toggle");
-const mobileMenu = document.querySelector(".mobile-menu");
-
-if (menuToggle && mobileMenu) {
-
-    menuToggle.addEventListener("click", () => {
-        mobileMenu.classList.toggle("active");
-    });
-
-    document.querySelectorAll(".mobile-menu a").forEach(link => {
-
-        link.addEventListener("click", () => {
-            mobileMenu.classList.remove("active");
-        });
-
-    });
-}
-// ================================
-// MOBILE MENU
-// ================================
-
-const menuToggle = document.querySelector(".menu-toggle");
-const mobileMenu = document.querySelector(".mobile-menu");
-
-if (menuToggle && mobileMenu) {
-
-    menuToggle.addEventListener("click", () => {
-
-        mobileMenu.classList.toggle("active");
-
-    });
-
-
-    // Close menu after selecting a section
-
-    document.querySelectorAll(".mobile-menu a").forEach(link => {
-
-        link.addEventListener("click", () => {
-
-            mobileMenu.classList.remove("active");
-
-        });
-
-    });
-
-}
+});
