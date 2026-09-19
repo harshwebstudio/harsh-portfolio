@@ -6,20 +6,40 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     // ================================
-    // SMOOTH NAVIGATION
+    // MOBILE MENU
     // ================================
 
-    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const mobileMenu = document.querySelector(".mobile-menu");
 
-        link.addEventListener("click", function (event) {
+    if (menuToggle && mobileMenu) {
 
-            const targetId = link.getAttribute("href");
+        menuToggle.onclick = function () {
+            mobileMenu.classList.toggle("active");
+        };
 
-            if (!targetId || targetId === "#") {
+    }
+
+
+    // ================================
+    // NAVIGATION
+    // ================================
+
+    const navLinks = document.querySelectorAll(
+        '.navbar a[href^="#"], .mobile-menu a[href^="#"], footer a[href^="#"]'
+    );
+
+    navLinks.forEach(function (link) {
+
+        link.onclick = function (event) {
+
+            const href = link.getAttribute("href");
+
+            if (!href || href === "#") {
                 return;
             }
 
-            const target = document.querySelector(targetId);
+            const target = document.querySelector(href);
 
             if (target) {
 
@@ -30,79 +50,24 @@ document.addEventListener("DOMContentLoaded", function () {
                     block: "start"
                 });
 
-                // Close mobile menu after clicking a link
-                const mobileMenu = document.querySelector(".mobile-menu");
-
                 if (mobileMenu) {
                     mobileMenu.classList.remove("active");
                 }
 
             }
 
-        });
+        };
 
     });
 
 
     // ================================
-    // MOBILE MENU
+    // SECTION VISIBILITY
     // ================================
 
-    const menuToggle = document.querySelector(".menu-toggle");
-    const mobileMenu = document.querySelector(".mobile-menu");
-
-    if (menuToggle && mobileMenu) {
-
-        menuToggle.addEventListener("click", function () {
-
-            mobileMenu.classList.toggle("active");
-
-        });
-
-    }
-
-
-    // ================================
-    // SCROLL REVEAL
-    // ================================
-
-    const sections = document.querySelectorAll(".section");
-
-    if ("IntersectionObserver" in window) {
-
-        const observer = new IntersectionObserver(
-            function (entries) {
-
-                entries.forEach(function (entry) {
-
-                    if (entry.isIntersecting) {
-
-                        entry.target.classList.add("show");
-
-                        observer.unobserve(entry.target);
-
-                    }
-
-                });
-
-            },
-            {
-                threshold: 0.05
-            }
-        );
-
-        sections.forEach(function (section) {
-            observer.observe(section);
-        });
-
-    } else {
-
-        // Fallback for older browsers
-        sections.forEach(function (section) {
-            section.classList.add("show");
-        });
-
-    }
+    document.querySelectorAll(".section").forEach(function (section) {
+        section.classList.add("show");
+    });
 
 
     // ================================
@@ -112,10 +77,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const footerText = document.querySelector("footer p");
 
     if (footerText) {
-
         footerText.textContent =
-            `© ${new Date().getFullYear()} Harsh — Web Designer`;
-
+            "© " + new Date().getFullYear() + " Harsh — Web Designer";
     }
 
 });
