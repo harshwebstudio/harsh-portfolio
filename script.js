@@ -3,62 +3,44 @@
 // JAVASCRIPT
 // ================================
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
 
     // ================================
     // SMOOTH NAVIGATION
     // ================================
 
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
+    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
 
-        link.addEventListener("click", event => {
+        link.addEventListener("click", function (event) {
 
             const targetId = link.getAttribute("href");
 
-            if (targetId === "#") return;
+            if (!targetId || targetId === "#") {
+                return;
+            }
 
             const target = document.querySelector(targetId);
 
             if (target) {
+
                 event.preventDefault();
 
                 target.scrollIntoView({
                     behavior: "smooth",
                     block: "start"
                 });
+
+                // Close mobile menu after clicking a link
+                const mobileMenu = document.querySelector(".mobile-menu");
+
+                if (mobileMenu) {
+                    mobileMenu.classList.remove("active");
+                }
+
             }
 
         });
 
-    });
-
-
-    // ================================
-    // SCROLL REVEAL
-    // ================================
-
-    const sections = document.querySelectorAll(".section");
-
-    const observer = new IntersectionObserver(
-        entries => {
-
-            entries.forEach(entry => {
-
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("show");
-                    observer.unobserve(entry.target);
-                }
-
-            });
-
-        },
-        {
-            threshold: 0.12
-        }
-    );
-
-    sections.forEach(section => {
-        observer.observe(section);
     });
 
 
@@ -71,17 +53,53 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (menuToggle && mobileMenu) {
 
-        menuToggle.addEventListener("click", () => {
+        menuToggle.addEventListener("click", function () {
+
             mobileMenu.classList.toggle("active");
+
         });
 
+    }
 
-        document.querySelectorAll(".mobile-menu a").forEach(link => {
 
-            link.addEventListener("click", () => {
-                mobileMenu.classList.remove("active");
-            });
+    // ================================
+    // SCROLL REVEAL
+    // ================================
 
+    const sections = document.querySelectorAll(".section");
+
+    if ("IntersectionObserver" in window) {
+
+        const observer = new IntersectionObserver(
+            function (entries) {
+
+                entries.forEach(function (entry) {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("show");
+
+                        observer.unobserve(entry.target);
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.05
+            }
+        );
+
+        sections.forEach(function (section) {
+            observer.observe(section);
+        });
+
+    } else {
+
+        // Fallback for older browsers
+        sections.forEach(function (section) {
+            section.classList.add("show");
         });
 
     }
