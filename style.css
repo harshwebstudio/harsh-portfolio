@@ -206,9 +206,16 @@ a {
    SECTIONS
 ================================ */
 
+/* IMPORTANT:
+   Sections are visible by default.
+   This prevents blank-screen problems.
+*/
+
 .section {
     padding: 120px 7%;
     border-top: 1px solid var(--line);
+    opacity: 1;
+    transform: none;
 }
 
 .section-label {
@@ -342,6 +349,11 @@ a {
     color: #555;
     font-size: 12px;
     letter-spacing: 3px;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.02);
 }
 
 .project-info {
@@ -357,6 +369,14 @@ a {
 .project-info h3 {
     font-size: 32px;
     margin: 8px 0 18px;
+}
+
+.project-description {
+    color: var(--muted) !important;
+    font-size: 14px !important;
+    letter-spacing: 0 !important;
+    line-height: 1.6;
+    margin-bottom: 18px;
 }
 
 .project-info a {
@@ -384,6 +404,13 @@ a {
     gap: 30px;
     padding: 35px 0;
     border-bottom: 1px solid var(--line);
+    transition:
+        padding-left 0.3s ease,
+        background 0.3s ease;
+}
+
+.service:hover {
+    padding-left: 10px;
 }
 
 .service > span {
@@ -415,7 +442,7 @@ a {
     padding-top: 25px;
 }
 
-.process-grid strong {
+.process-grid span {
     color: #555;
     font-size: 12px;
 }
@@ -432,519 +459,6 @@ a {
 }
 
 
-/* ================================
-   CONTACT
-================================ */
-
-.contact-section {
-    padding: 150px 7%;
-    text-align: center;
-    border-top: 1px solid var(--line);
-}
-
-.contact-section h2 {
-    font-size: clamp(55px, 10vw, 140px);
-    line-height: 0.85;
-    letter-spacing: -5px;
-}
-
-.contact-section > p:not(.eyebrow) {
-    color: var(--muted);
-    max-width: 500px;
-    margin: 35px auto;
-}
-
-
-/* ================================
-   FOOTER
-================================ */
-
-footer {
-    border-top: 1px solid var(--line);
-    padding: 35px 7%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
-
-.footer-logo {
-    font-size: 20px;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
-
-footer p {
-    color: #666;
-    font-size: 12px;
-}
-
-.footer-links {
-    display: flex;
-    gap: 20px;
-}
-
-.footer-links a {
-    color: #777;
-    font-size: 12px;
-}
-
-
-/* ================================
-   MOBILE
-================================ */
-
-@media (max-width: 800px) {
-
-    .navbar {
-        padding: 0 5%;
-    }
-
-    .navbar nav {
-        display: none;
-    }
-
-    .hero {
-        padding: 80px 5%;
-    }
-
-    .hero h1 {
-        font-size: clamp(48px, 15vw, 80px);
-        letter-spacing: -3px;
-    }
-
-    .hero-number {
-        font-size: 70px;
-        right: 5%;
-        bottom: 25px;
-    }
-
-    .section {
-        padding: 80px 5%;
-    }
-
-    .about-content {
-        grid-template-columns: 1fr;
-        gap: 45px;
-    }
-
-    .skills-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .project-image {
-        height: 260px;
-    }
-
-    .service {
-        grid-template-columns: 40px 1fr;
-        gap: 15px;
-    }
-
-    .service p {
-        grid-column: 2;
-    }
-
-    .process-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 35px;
-    }
-
-    .contact-section {
-        padding: 100px 5%;
-    }
-
-    .contact-section h2 {
-        letter-spacing: -3px;
-    }
-
-    footer {
-        padding: 30px 5%;
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-
-@media (max-width: 500px) {
-
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .process-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .skill-card {
-        min-height: 200px;
-    }
-
-    .skill-card h3 {
-        margin-top: 45px;
-    }
-
-    .nav-button {
-        display: none;
-    }
-
-  /* ================================
-   MOBILE MENU
-================================ */
-
-.menu-toggle {
-    display: none;
-    background: transparent;
-    border: 1px solid #333;
-    color: #fff;
-    font-size: 22px;
-    width: 44px;
-    height: 44px;
-    cursor: pointer;
-}
-
-.mobile-menu {
-    display: none;
-}
-
-.contact-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 14px;
-    flex-wrap: wrap;
-}
-
-@media (max-width: 800px) {
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .mobile-menu {
-        position: fixed;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        padding: 25px 5%;
-        background: rgba(8, 8, 8, 0.98);
-        border-bottom: 1px solid #242424;
-        z-index: 999;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .mobile-menu.active {
-        display: flex;
-    }
-
-    .mobile-menu a {
-        color: #aaa;
-        font-size: 16px;
-        padding: 8px 0;
-    }
-
-    .mobile-menu a:hover {
-        color: #fff;
-    }
-
-       }
-/* ================================
-   MOBILE MENU + CONTACT BUTTONS
-================================ */
-
-.menu-toggle {
-    display: none;
-    background: transparent;
-    border: 1px solid #333;
-    color: #fff;
-    font-size: 22px;
-    width: 44px;
-    height: 44px;
-    cursor: pointer;
-}
-
-.mobile-menu {
-    display: none;
-}
-
-.contact-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 14px;
-    flex-wrap: wrap;
-}
-
-
-/* MOBILE */
-
-@media (max-width: 800px) {
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .mobile-menu {
-        position: fixed;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        padding: 25px 5%;
-        background: rgba(8, 8, 8, 0.98);
-        border-bottom: 1px solid #242424;
-        z-index: 999;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .mobile-menu.active {
-        display: flex;
-    }
-
-    .mobile-menu a {
-        color: #aaa;
-        font-size: 16px;
-        padding: 12px 0;
-        border-bottom: 1px solid #1c1c1c;
-    }
-
-    .mobile-menu a:hover {
-        color: #fff;
-    }
-
-}
-
-
-/* SMALL PHONES */
-
-@media (max-width: 500px) {
-
-    .contact-buttons {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .contact-buttons a {
-        width: 100%;
-        text-align: center;
-    }
-
-}
-/* ================================
-   HECTO PROJECT GALLERY
-================================ */
-
-.hecto-gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-    padding: 8px;
-    overflow: hidden;
-}
-
-.hecto-gallery img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    display: block;
-    border-radius: 4px;
-    transition: transform 0.3s ease;
-}
-
-.hecto-gallery img:hover {
-    transform: scale(1.03);
-}
-
-
-/* Mobile */
-
-@media (max-width: 800px) {
-
-    .hecto-gallery {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 6px;
-        padding: 6px;
-    }
-
-    .hecto-gallery img {
-        height: 140px;
-    }
-
-}
-
-
-@media (max-width: 500px) {
-
-    .hecto-gallery {
-        grid-template-columns: 1fr;
-    }
-
-    .hecto-gallery img {
-        height: 220px;
-    }
-
-}
-/* ================================
-   PREMIUM SCROLL REVEAL ANIMATIONS
-================================ */
-
-.section {
-    opacity: 0;
-    transform: translateY(35px);
-    transition:
-        opacity 0.8s ease,
-        transform 0.8s ease;
-}
-
-.section.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-/* ================================
-   HERO LOAD ANIMATION
-================================ */
-
-.hero-content {
-    animation: heroFadeUp 1s ease forwards;
-}
-
-.hero-number {
-    animation: heroNumberFade 1.2s ease 0.2s forwards;
-    opacity: 0;
-}
-
-@keyframes heroFadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes heroNumberFade {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-/* ================================
-   BUTTON HOVER
-================================ */
-
-.primary-btn,
-.secondary-btn,
-.nav-button {
-    transition:
-        transform 0.3s ease,
-        background 0.3s ease,
-        color 0.3s ease,
-        border-color 0.3s ease;
-}
-
-.primary-btn:hover,
-.secondary-btn:hover,
-.nav-button:hover {
-    transform: translateY(-3px);
-}
-
-
-/* ================================
-   CARD HOVER
-================================ */
-
-.skill-card,
-.project-card {
-    transition:
-        transform 0.35s ease,
-        background 0.35s ease,
-        border-color 0.35s ease;
-}
-
-.skill-card:hover {
-    transform: translateY(-6px);
-}
-
-.project-card:hover {
-    transform: translateY(-8px);
-}
-
-
-/* ================================
-   PROJECT IMAGE ZOOM
-================================ */
-
-.project-card:hover .project-image {
-    transform: scale(1.02);
-}
-
-.project-image {
-    transition: transform 0.5s ease;
-}
-
-
-/* ================================
-   HECTO IMAGE HOVER
-================================ */
-
-.hecto-gallery img {
-    transition:
-        transform 0.4s ease,
-        filter 0.4s ease;
-}
-
-.hecto-gallery img:hover {
-    transform: scale(1.04);
-}
-
-
-/* ================================
-   SERVICE HOVER
-================================ */
-
-.service {
-    transition:
-        padding-left 0.3s ease,
-        background 0.3s ease;
-}
-
-.service:hover {
-    padding-left: 10px;
-}
-
-
-/* ================================
-   REDUCED MOTION
-================================ */
-
-@media (prefers-reduced-motion: reduce) {
-
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
-
-}
 /* ================================
    PRICING
 ================================ */
@@ -1028,6 +542,11 @@ footer p {
     font-size: 13px;
 }
 
+.pricing-card li::before {
+    content: "✓ ";
+    color: #777;
+}
+
 .pricing-btn {
     margin-top: auto;
     padding: 14px 18px;
@@ -1062,7 +581,187 @@ footer p {
 
 
 /* ================================
-   PRICING — MOBILE
+   CONTACT
+================================ */
+
+.contact-section {
+    padding: 150px 7%;
+    text-align: center;
+    border-top: 1px solid var(--line);
+}
+
+.contact-section h2 {
+    font-size: clamp(55px, 10vw, 140px);
+    line-height: 0.85;
+    letter-spacing: -5px;
+}
+
+.contact-section > p:not(.eyebrow) {
+    color: var(--muted);
+    max-width: 500px;
+    margin: 35px auto;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    border-top: 1px solid var(--line);
+    padding: 35px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+footer p {
+    color: #666;
+    font-size: 12px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #777;
+    font-size: 12px;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+
+/* ================================
+   MOBILE MENU
+================================ */
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid #333;
+    color: #fff;
+    font-size: 22px;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+
+/* ================================
+   HECTO PROJECT GALLERY
+================================ */
+
+.hecto-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 8px;
+    overflow: hidden;
+}
+
+.hecto-gallery img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+    transition:
+        transform 0.4s ease,
+        filter 0.4s ease;
+}
+
+.hecto-gallery img:hover {
+    transform: scale(1.04);
+}
+
+
+/* ================================
+   ANIMATIONS
+================================ */
+
+.hero-content {
+    animation: heroFadeUp 1s ease forwards;
+}
+
+.hero-number {
+    animation: heroNumberFade 1.2s ease 0.2s forwards;
+    opacity: 0;
+}
+
+@keyframes heroFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroNumberFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.primary-btn,
+.secondary-btn,
+.nav-button {
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover,
+.nav-button:hover {
+    transform: translateY(-3px);
+}
+
+.skill-card,
+.project-card {
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+/* ================================
+   TABLET
 ================================ */
 
 @media (max-width: 900px) {
@@ -1080,3 +779,201 @@ footer p {
     }
 
 }
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero {
+        padding: 80px 5%;
+    }
+
+    .hero h1 {
+        font-size: clamp(48px, 15vw, 80px);
+        letter-spacing: -3px;
+    }
+
+    .hero-number {
+        font-size: 70px;
+        right: 5%;
+        bottom: 25px;
+    }
+
+    .section {
+        padding: 80px 5%;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        height: 260px;
+    }
+
+    .service {
+        grid-template-columns: 40px 1fr;
+        gap: 15px;
+    }
+
+    .service p {
+        grid-column: 2;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+    }
+
+    .contact-section {
+        padding: 100px 5%;
+    }
+
+    .contact-section h2 {
+        letter-spacing: -3px;
+    }
+
+    footer {
+        padding: 30px 5%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        padding: 25px 5%;
+        background: rgba(8, 8, 8, 0.98);
+        border-bottom: 1px solid #242424;
+        z-index: 999;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .mobile-menu.active {
+        display: flex;
+    }
+
+    .mobile-menu a {
+        color: #aaa;
+        font-size: 16px;
+        padding: 12px 0;
+        border-bottom: 1px solid #1c1c1c;
+    }
+
+    .mobile-menu a:hover {
+        color: #fff;
+    }
+
+    .hecto-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+        padding: 6px;
+    }
+
+    .hecto-gallery img {
+        height: 140px;
+    }
+}
+
+
+/* ================================
+   SMALL PHONES
+================================ */
+
+@media (max-width: 500px) {
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card {
+        min-height: 200px;
+    }
+
+    .skill-card h3 {
+        margin-top: 45px;
+    }
+
+    .contact-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contact-buttons a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hecto-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .hecto-gallery img {
+        height: 220px;
+    }
+
+    .pricing-card {
+        padding: 25px;
+    }
+
+    .pricing-card h3 {
+        font-size: 30px;
+    }
+
+    .pricing-price {
+        font-size: 36px;
+    }
+}
+
+
+/* ================================
+   REDUCED MOTION
+================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+       }
