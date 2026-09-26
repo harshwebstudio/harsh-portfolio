@@ -141,14 +141,13 @@
 </head>
 <body>
 
-
     <!-- ================================
          NAVBAR
     ================================= -->
 
     <header class="navbar">
 
-        <a href="#home" class="logo">
+        <a href="#home" class="logo" aria-label="Harsh Web Designer Home">
 
             <img src="logo.jpeg"
                  alt="Harsh Web Designer Logo"
@@ -157,7 +156,7 @@
         </a>
 
 
-        <nav>
+        <nav id="navMenu" aria-label="Main navigation">
 
             <a href="#home">Home</a>
             <a href="#about">About</a>
@@ -175,13 +174,17 @@
         </a>
 
 
-        <button class="menu-toggle"
-                aria-label="Open menu">
+        <button id="menuToggle"
+                class="menu-toggle"
+                type="button"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="navMenu">
             ☰
         </button>
 
 
-        <div class="mobile-menu">
+        <div class="mobile-menu" id="mobileMenu">
 
             <a href="#home">Home</a>
             <a href="#about">About</a>
@@ -198,10 +201,14 @@
 
 
     <!-- ================================
-         HERO
+         MAIN CONTENT
     ================================= -->
 
     <main>
+
+        <!-- ================================
+             HERO
+        ================================= -->
 
         <section class="hero" id="home">
 
@@ -214,14 +221,14 @@
 
                 <h1>
                     I BUILD
-                    <span>WEBSITES</span>
-                    THAT STAND OUT.
+                    <span>MODERN WEBSITES</span>
+                    FOR BUSINESSES.
                 </h1>
 
 
                 <p class="hero-text">
-                    I create modern, responsive and premium
-                    websites for businesses, brands and creators.
+                    I design modern, responsive and premium websites
+                    for businesses, local brands, creators and professionals.
                 </p>
 
 
@@ -276,16 +283,16 @@
                 <div class="about-text">
 
                     <p>
-                        I'm Harsh, a web designer focused on
-                        creating clean, modern and user-friendly
-                        websites.
+                        I'm Harsh, a freelance web designer creating
+                        modern, responsive and user-friendly websites
+                        for businesses, brands, creators and professionals.
                     </p>
 
 
                     <p>
-                        I enjoy turning ideas into responsive
-                        digital experiences with a strong focus
-                        on design, usability and performance.
+                        I focus on clean design, usability, mobile
+                        responsiveness, performance and creating websites
+                        that give businesses a professional online presence.
                     </p>
 
                 </div>
@@ -324,7 +331,8 @@
                     </h3>
 
                     <p>
-                        Clean and structured website markup.
+                        Clean and structured website markup
+                        for accessible and search-friendly pages.
                     </p>
 
                 </div>
@@ -339,7 +347,8 @@
                     </h3>
 
                     <p>
-                        Responsive layouts and modern styling.
+                        Responsive layouts and modern styling
+                        for desktop and mobile devices.
                     </p>
 
                 </div>
@@ -354,7 +363,8 @@
                     </h3>
 
                     <p>
-                        Interactive and dynamic experiences.
+                        Interactive website features and
+                        dynamic user experiences.
                     </p>
 
                 </div>
@@ -369,7 +379,8 @@
                     </h3>
 
                     <p>
-                        Simple, clear and user-focused design.
+                        Simple, clear and user-focused website
+                        interfaces designed for usability.
                     </p>
 
                 </div>
@@ -427,15 +438,15 @@
 
                         <p class="project-description">
                             Modern premium fitness website designed
-                            for a professional gym with
-                            membership-focused sections and
-                            responsive design.
+                            for a professional gym with membership-focused
+                            sections and responsive design.
                         </p>
 
 
                         <a href="https://harshwebstudio.github.io/alpha-muscle-kingdom/"
                            target="_blank"
-                           rel="noopener">
+                           rel="noopener noreferrer"
+                           aria-label="View Alpha The Muscle Kingdom website">
                             View Website →
                         </a>
 
@@ -479,7 +490,8 @@
 
                         <a href="images/PDFGallery_20260918_113732.pdf"
                            target="_blank"
-                           rel="noopener">
+                           rel="noopener noreferrer"
+                           aria-label="View Hecto project">
                             View Project →
                         </a>
 
@@ -515,16 +527,16 @@
 
 
                         <p class="project-description">
-                            Premium five-page café and bakery
-                            website featuring menu, about,
-                            gallery, contact and responsive
-                            mobile design.
+                            Premium café and bakery website concept
+                            featuring menu, about, gallery, contact
+                            and responsive mobile design.
                         </p>
 
 
                         <a href="https://harshwebstudio.github.io/velora-cafe/"
                            target="_blank"
-                           rel="noopener">
+                           rel="noopener noreferrer"
+                           aria-label="View Velora Cafe website">
                             View Website →
                         </a>
 
@@ -562,13 +574,14 @@
                         <p class="project-description">
                             Modern one-page medical website with
                             responsive design, WhatsApp, Instagram,
-                            Google Maps and smooth mobile experience.
+                            Google Maps and a mobile-friendly experience.
                         </p>
 
 
                         <a href="https://harshwebstudio.github.io/SHRI-SAMARTH-MEDICAL/"
                            target="_blank"
-                           rel="noopener">
+                           rel="noopener noreferrer"
+                           aria-label="View Shri Samarth Medical website">
                             View Website →
                         </a>
 
@@ -595,7 +608,7 @@
 
 
             <h2 class="section-title">
-                What I <span>offer.</span>
+                Professional <span>web design services.</span>
             </h2>
 
 
@@ -613,8 +626,9 @@
                         </h3>
 
                         <p>
-                            Professional websites for businesses
-                            and local brands.
+                            Professional responsive websites for
+                            businesses and local brands looking to
+                            build a strong online presence.
                         </p>
 
                     </div>
@@ -634,8 +648,8 @@
                         </h3>
 
                         <p>
-                            High-impact landing pages designed
-                            to present products and services.
+                            High-impact landing pages designed to
+                            present products, services and offers clearly.
                         </p>
 
                     </div>
@@ -655,7 +669,7 @@
                         </h3>
 
                         <p>
-                            Modern portfolios for creators,
+                            Modern portfolio websites for creators,
                             freelancers and professionals.
                         </p>
 
@@ -676,7 +690,8 @@
                         </h3>
 
                         <p>
-                            Modern redesigns for outdated websites.
+                            Modern redesigns for outdated websites
+                            with improved usability and responsive layouts.
                         </p>
 
                     </div>
@@ -702,7 +717,7 @@
 
 
             <h2 class="section-title">
-                Simple <span>packages.</span>
+                Simple <span>website packages.</span>
             </h2>
 
 
@@ -718,7 +733,7 @@
             <div class="pricing-image-wrapper">
 
                 <img src="pricing.png"
-                     alt="Harsh Web Designer Pricing"
+                     alt="Harsh Web Studio website pricing packages"
                      class="pricing-image">
 
             </div>
@@ -771,7 +786,7 @@
                     <a href="https://wa.me/919987475783?text=Hello%20Harsh%2C%20I%20am%20interested%20in%20the%20Starter%20website%20package."
                        class="pricing-btn"
                        target="_blank"
-                       rel="noopener">
+                       rel="noopener noreferrer">
                         Choose Starter →
                     </a>
 
@@ -829,7 +844,7 @@
                     <a href="https://wa.me/919987475783?text=Hello%20Harsh%2C%20I%20am%20interested%20in%20the%20Business%20website%20package."
                        class="pricing-btn"
                        target="_blank"
-                       rel="noopener">
+                       rel="noopener noreferrer">
                         Choose Business →
                     </a>
 
@@ -882,7 +897,7 @@
                     <a href="https://wa.me/919987475783?text=Hello%20Harsh%2C%20I%20am%20interested%20in%20the%20Premium%20website%20package."
                        class="pricing-btn"
                        target="_blank"
-                       rel="noopener">
+                       rel="noopener noreferrer">
                         Choose Premium →
                     </a>
 
@@ -902,180 +917,188 @@
 
 
         <!-- ================================
-             PROCESS
-        ================================= -->
+     PROCESS
+================================= -->
 
-        <section class="section" id="process">
+<section class="section" id="process">
 
-            <div class="section-label">
-                PROCESS
-            </div>
-
-
-            <h2 class="section-title">
-                From idea to <span>launch.</span>
-            </h2>
+    <div class="section-label">
+        PROCESS
+    </div>
 
 
-            <div class="process-grid">
+    <h2 class="section-title">
+        From idea to <span>launch.</span>
+    </h2>
 
 
-                <div class="process-card">
-
-                    <span>01</span>
-
-                    <h3>
-                        Discover
-                    </h3>
-
-                    <p>
-                        Understand the idea, audience and goals.
-                    </p>
-
-                </div>
+    <div class="process-grid">
 
 
+        <div class="process-card">
 
-                <div class="process-card">
+            <span>01</span>
 
-                    <span>02</span>
-
-                    <h3>
-                        Design
-                    </h3>
-
-                    <p>
-                        Create the visual direction and layout.
-                    </p>
-
-                </div>
-
-
-
-                <div class="process-card">
-
-                    <span>03</span>
-
-                    <h3>
-                        Develop
-                    </h3>
-
-                    <p>
-                        Build the responsive website.
-                    </p>
-
-                </div>
-
-
-
-                <div class="process-card">
-
-                    <span>04</span>
-
-                    <h3>
-                        Launch
-                    </h3>
-
-                    <p>
-                        Test, optimize and publish the website.
-                    </p>
-
-                </div>
-
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ================================
-             CONTACT
-        ================================= -->
-
-        <section class="section contact-section"
-                 id="contact">
-
-            <div class="section-label">
-                HAVE A PROJECT?
-            </div>
-
-
-            <h2 class="section-title">
-                LET'S BUILD
-                <span>SOMETHING.</span>
-            </h2>
-
+            <h3>
+                Discover
+            </h3>
 
             <p>
-                Have a project in mind?
-                Let's create something modern,
-                professional and memorable.
+                Understand the business idea, target audience
+                and website goals.
             </p>
 
-
-            <div class="contact-buttons">
-
-                <a href="https://wa.me/919987475783?text=Hello%20Harsh%2C%20I%20want%20to%20discuss%20a%20website%20project."
-                   class="primary-btn"
-                   target="_blank"
-                   rel="noopener">
-                    WhatsApp Me →
-                </a>
-
-
-                <a href="mailto:harshwardhankdm@gmail.com"
-                   class="secondary-btn">
-                    Email Me
-                </a>
-
-
-                <a href="tel:+919987475783"
-                   class="secondary-btn">
-                    Call Me
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
+        </div>
 
 
 
-    <!-- ================================
-         FOOTER
-    ================================= -->
+        <div class="process-card">
 
-    <footer>
+            <span>02</span>
 
-        <div class="footer-logo">
+            <h3>
+                Design
+            </h3>
 
-            <img src="logo.jpeg"
-                 alt="Harsh Web Designer Logo"
-                 class="brand-logo">
+            <p>
+                Create the visual direction, structure and
+                user experience for the website.
+            </p>
 
         </div>
 
 
-        <p>
-            © 2026 Harsh — Web Designer
-        </p>
 
+        <div class="process-card">
 
-        <div class="footer-links">
+            <span>03</span>
 
-            <a href="#home">Home</a>
-            <a href="#projects">Projects</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#contact">Contact</a>
+            <h3>
+                Develop
+            </h3>
+
+            <p>
+                Build a responsive website using modern
+                web technologies.
+            </p>
 
         </div>
 
-    </footer>
 
 
-    <script src="script.js"></script>
+        <div class="process-card">
+
+            <span>04</span>
+
+            <h3>
+                Launch
+            </h3>
+
+            <p>
+                Test, optimize and publish the finished website.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================
+     CONTACT
+================================= -->
+
+<section class="section contact-section"
+         id="contact">
+
+    <div class="section-label">
+        HAVE A PROJECT?
+    </div>
+
+
+    <h2 class="section-title">
+        LET'S BUILD
+        <span>SOMETHING.</span>
+    </h2>
+
+
+    <p>
+        Have a website project in mind?
+        Let's create something modern,
+        professional and memorable for your business.
+    </p>
+
+
+    <div class="contact-buttons">
+
+        <a href="https://wa.me/919987475783?text=Hello%20Harsh%2C%20I%20want%20to%20discuss%20a%20website%20project."
+           class="primary-btn"
+           target="_blank"
+           rel="noopener noreferrer">
+            WhatsApp Me →
+        </a>
+
+
+        <a href="mailto:harshwardhankdm@gmail.com"
+           class="secondary-btn">
+            Email Me
+        </a>
+
+
+        <a href="tel:+919987475783"
+           class="secondary-btn">
+            Call Me
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+<!-- ================================
+     FOOTER
+================================= -->
+
+<footer>
+
+    <div class="footer-logo">
+
+        <img src="logo.jpeg"
+             alt="Harsh Web Designer Logo"
+             class="brand-logo">
+
+    </div>
+
+
+    <p>
+        © 2026 Harsh — Web Designer
+    </p>
+
+
+    <div class="footer-links">
+
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+
+    </div>
+
+</footer>
+
+
+
+<!-- ================================
+     JAVASCRIPT
+================================= -->
+
+<script src="script.js"></script>
 
 </body>
 </html>
