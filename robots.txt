@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://harshwebstudio.github.io/harsh-portfolio/sitemap.xml
