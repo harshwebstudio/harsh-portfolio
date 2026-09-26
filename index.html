@@ -77,21 +77,58 @@
     <link rel="stylesheet"
           href="style.css">
 
-    <!-- ================= STRUCTURED DATA ================= -->
+    <!-- ================================
+     ADVANCED STRUCTURED DATA
+================================= -->
 
-    <script type="application/ld+json">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+
     {
-      "@context": "https://schema.org",
       "@type": "Person",
+      "@id": "https://harshwebstudio.github.io/harsh-portfolio/#person",
       "name": "Harsh",
-      "jobTitle": "Web Designer",
+      "jobTitle": "Freelance Web Designer",
       "url": "https://harshwebstudio.github.io/harsh-portfolio/",
-      "image": "https://harshwebstudio.github.io/harsh-portfolio/logo.jpg",
+      "image": "https://harshwebstudio.github.io/harsh-portfolio/logo.jpeg",
       "sameAs": [
         "https://www.instagram.com/harshwebdesignerrr11/"
       ]
+    },
+
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://harshwebstudio.github.io/harsh-portfolio/#business",
+      "name": "Harsh Web Studio",
+      "url": "https://harshwebstudio.github.io/harsh-portfolio/",
+      "description": "Harsh Web Studio provides modern, responsive and premium website design services for businesses, brands, creators and professionals.",
+      "image": "https://harshwebstudio.github.io/harsh-portfolio/logo.jpeg",
+      "email": "harshwardhankdm@gmail.com",
+      "telephone": "+91-9987475783",
+      "priceRange": "₹₹",
+      "founder": {
+        "@id": "https://harshwebstudio.github.io/harsh-portfolio/#person"
+      },
+      "sameAs": [
+        "https://www.instagram.com/harshwebdesignerrr11/"
+      ],
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "serviceType": [
+        "Business Website Design",
+        "Landing Page Design",
+        "Portfolio Website Design",
+        "Website Redesign"
+      ]
     }
-    </script>
+
+  ]
+}
+</script>
 
     <style>
 
