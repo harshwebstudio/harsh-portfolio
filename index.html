@@ -47,7 +47,7 @@
           content="https://harshwebstudio.github.io/harsh-portfolio/">
 
     <meta property="og:image"
-          content="https://harshwebstudio.github.io/harsh-portfolio/logo.jpg">
+          content="https://harshwebstudio.github.io/harsh-portfolio/assets/logo.jpeg">
 
     <meta property="og:site_name"
           content="Harsh Web Studio">
@@ -64,13 +64,13 @@
           content="Modern, responsive and premium websites designed by Harsh.">
 
     <meta name="twitter:image"
-          content="https://harshwebstudio.github.io/harsh-portfolio/logo.jpg">
+          content="https://harshwebstudio.github.io/harsh-portfolio/assets/logo.jpeg">
 
     <!-- ================= FAVICON ================= -->
 
     <link rel="icon"
           type="image/jpeg"
-          href="logo.jpg">
+          href="assets/logo.jpeg">
 
     <!-- ================= STYLESHEET ================= -->
 
@@ -78,55 +78,56 @@
           href="style.css">
 
     <!-- ================================
-     ADVANCED STRUCTURED DATA
-================================= -->
+         ADVANCED STRUCTURED DATA
+    ================================= -->
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-
+    <script type="application/ld+json">
     {
-      "@type": "Person",
-      "@id": "https://harshwebstudio.github.io/harsh-portfolio/#person",
-      "name": "Harsh",
-      "jobTitle": "Freelance Web Designer",
-      "url": "https://harshwebstudio.github.io/harsh-portfolio/",
-      "image": "https://harshwebstudio.github.io/harsh-portfolio/logo.jpeg",
-      "sameAs": [
-        "https://www.instagram.com/harshwebdesignerrr11/"
+      "@context": "https://schema.org",
+      "@graph": [
+
+        {
+          "@type": "Person",
+          "@id": "https://harshwebstudio.github.io/harsh-portfolio/#person",
+          "name": "Harsh",
+          "jobTitle": "Freelance Web Designer",
+          "url": "https://harshwebstudio.github.io/harsh-portfolio/",
+          "image": "https://harshwebstudio.github.io/harsh-portfolio/assets/logo.jpeg",
+          "sameAs": [
+            "https://www.instagram.com/harshwebdesignerrr11/"
+          ]
+        },
+
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://harshwebstudio.github.io/harsh-portfolio/#business",
+          "name": "Harsh Web Studio",
+          "url": "https://harshwebstudio.github.io/harsh-portfolio/",
+          "description": "Harsh Web Studio provides modern, responsive and premium website design services for businesses, brands, creators and professionals.",
+          "image": "https://harshwebstudio.github.io/harsh-portfolio/assets/logo.jpeg",
+          "email": "harshwardhankdm@gmail.com",
+          "telephone": "+91-9987475783",
+          "priceRange": "₹₹",
+          "founder": {
+            "@id": "https://harshwebstudio.github.io/harsh-portfolio/#person"
+          },
+          "sameAs": [
+            "https://www.instagram.com/harshwebdesignerrr11/"
+          ],
+          "areaServed": {
+            "@type": "Country",
+            "name": "India"
+          }
+        }
+
       ]
-    },
-
-    {
-      "@type": "ProfessionalService",
-      "@id": "https://harshwebstudio.github.io/harsh-portfolio/#business",
-      "name": "Harsh Web Studio",
-      "url": "https://harshwebstudio.github.io/harsh-portfolio/",
-      "description": "Harsh Web Studio provides modern, responsive and premium website design services for businesses, brands, creators and professionals.",
-      "image": "https://harshwebstudio.github.io/harsh-portfolio/logo.jpeg",
-      "email": "harshwardhankdm@gmail.com",
-      "telephone": "+91-9987475783",
-      "priceRange": "₹₹",
-      "founder": {
-        "@id": "https://harshwebstudio.github.io/harsh-portfolio/#person"
-      },
-      "sameAs": [
-        "https://www.instagram.com/harshwebdesignerrr11/"
-      ],
-      "areaServed": {
-        "@type": "Country",
-        "name": "India"
-}
     }
-
-  ]
-}
-</script>
+    </script>
 
     <style>
 
         /* LOGO */
+
         .brand-logo {
             width: 58px;
             height: 58px;
@@ -134,7 +135,9 @@
             display: block;
         }
 
+
         /* PRICING IMAGE */
+
         .pricing-image-wrapper {
             width: 100%;
             margin: 35px auto;
@@ -149,6 +152,7 @@
             margin: 0 auto;
             border-radius: 18px;
         }
+
 
         @media (max-width: 600px) {
 
@@ -170,6 +174,8 @@
     </style>
 
 </head>
+
+
 <body>
 
     <!-- ================================
@@ -178,16 +184,19 @@
 
     <header class="navbar">
 
-        <a href="#home" class="logo" aria-label="Harsh Web Designer Home">
+        <a href="#home"
+           class="logo"
+           aria-label="Harsh Web Designer Home">
 
-            <img src="logo.jpeg"
+            <img src="assets/logo.jpeg"
                  alt="Harsh Web Designer Logo"
                  class="brand-logo">
 
         </a>
 
 
-        <nav id="navMenu" aria-label="Main navigation">
+        <nav id="navMenu"
+             aria-label="Main navigation">
 
             <a href="#home">Home</a>
             <a href="#about">About</a>
@@ -200,7 +209,8 @@
         </nav>
 
 
-        <a href="#contact" class="nav-button">
+        <a href="#contact"
+           class="nav-button">
             Let's Talk
         </a>
 
@@ -211,11 +221,14 @@
                 aria-label="Open menu"
                 aria-expanded="false"
                 aria-controls="navMenu">
+
             ☰
+
         </button>
 
 
-        <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu"
+             id="mobileMenu">
 
             <a href="#home">Home</a>
             <a href="#about">About</a>
@@ -237,11 +250,13 @@
 
     <main>
 
+
         <!-- ================================
              HERO
         ================================= -->
 
-        <section class="hero" id="home">
+        <section class="hero"
+                 id="home">
 
             <div class="hero-content">
 
@@ -251,15 +266,23 @@
 
 
                 <h1>
+
                     I BUILD
-                    <span>MODERN WEBSITES</span>
+
+                    <span>
+                        MODERN WEBSITES
+                    </span>
+
                     FOR BUSINESSES.
+
                 </h1>
 
 
                 <p class="hero-text">
+
                     I design modern, responsive and premium websites
                     for businesses, local brands, creators and professionals.
+
                 </p>
 
 
@@ -267,12 +290,17 @@
 
                     <a href="#projects"
                        class="primary-btn">
+
                         View My Work →
+
                     </a>
+
 
                     <a href="#contact"
                        class="secondary-btn">
+
                         Let's Work Together
+
                     </a>
 
                 </div>
@@ -292,7 +320,8 @@
              ABOUT
         ================================= -->
 
-        <section class="section" id="about">
+        <section class="section"
+                 id="about">
 
             <div class="section-label">
                 ABOUT ME
@@ -304,8 +333,13 @@
                 <div>
 
                     <h2 class="section-title">
+
                         Turning ideas into
-                        <span>digital experiences.</span>
+
+                        <span>
+                            digital experiences.
+                        </span>
+
                     </h2>
 
                 </div>
@@ -314,16 +348,20 @@
                 <div class="about-text">
 
                     <p>
+
                         I'm Harsh, a freelance web designer creating
                         modern, responsive and user-friendly websites
                         for businesses, brands, creators and professionals.
+
                     </p>
 
 
                     <p>
+
                         I focus on clean design, usability, mobile
                         responsiveness, performance and creating websites
                         that give businesses a professional online presence.
+
                     </p>
 
                 </div>
@@ -338,7 +376,8 @@
              SKILLS
         ================================= -->
 
-        <section class="section" id="skills">
+        <section class="section"
+                 id="skills">
 
             <div class="section-label">
                 SKILLS
@@ -346,7 +385,13 @@
 
 
             <h2 class="section-title">
-                What I <span>work with.</span>
+
+                What I
+
+                <span>
+                    work with.
+                </span>
+
             </h2>
 
 
@@ -355,63 +400,82 @@
 
                 <div class="skill-card">
 
-                    <span>01</span>
+                    <span>
+                        01
+                    </span>
 
                     <h3>
                         HTML
                     </h3>
 
                     <p>
+
                         Clean and structured website markup
                         for accessible and search-friendly pages.
+
                     </p>
 
                 </div>
 
 
+
                 <div class="skill-card">
 
-                    <span>02</span>
+                    <span>
+                        02
+                    </span>
 
                     <h3>
                         CSS
                     </h3>
 
                     <p>
+
                         Responsive layouts and modern styling
                         for desktop and mobile devices.
+
                     </p>
 
                 </div>
 
 
+
                 <div class="skill-card">
 
-                    <span>03</span>
+                    <span>
+                        03
+                    </span>
 
                     <h3>
                         JavaScript
                     </h3>
 
                     <p>
+
                         Interactive website features and
                         dynamic user experiences.
+
                     </p>
 
                 </div>
 
 
+
                 <div class="skill-card">
 
-                    <span>04</span>
+                    <span>
+                        04
+                    </span>
 
                     <h3>
                         UI / UX
                     </h3>
 
                     <p>
+
                         Simple, clear and user-focused website
                         interfaces designed for usability.
+
                     </p>
 
                 </div>
@@ -427,7 +491,8 @@
              PROJECTS / PORTFOLIO
         ================================= -->
 
-        <section class="section" id="projects">
+        <section class="section"
+                 id="projects">
 
             <div class="section-label">
                 SELECTED WORK
@@ -435,7 +500,13 @@
 
 
             <h2 class="section-title">
-                Projects I've <span>built.</span>
+
+                Projects I've
+
+                <span>
+                    built.
+                </span>
+
             </h2>
 
 
@@ -468,9 +539,11 @@
 
 
                         <p class="project-description">
+
                             Modern premium fitness website designed
                             for a professional gym with membership-focused
                             sections and responsive design.
+
                         </p>
 
 
@@ -478,7 +551,9 @@
                            target="_blank"
                            rel="noopener noreferrer"
                            aria-label="View Alpha The Muscle Kingdom website">
+
                             View Website →
+
                         </a>
 
                     </div>
@@ -513,9 +588,11 @@
 
 
                         <p class="project-description">
+
                             Premium technology and gaming brand
                             website concept with a modern dark
                             visual direction.
+
                         </p>
 
 
@@ -523,7 +600,9 @@
                            target="_blank"
                            rel="noopener noreferrer"
                            aria-label="View Hecto project">
+
                             View Project →
+
                         </a>
 
                     </div>
@@ -558,9 +637,11 @@
 
 
                         <p class="project-description">
+
                             Premium café and bakery website concept
                             featuring menu, about, gallery, contact
                             and responsive mobile design.
+
                         </p>
 
 
@@ -568,7 +649,9 @@
                            target="_blank"
                            rel="noopener noreferrer"
                            aria-label="View Velora Cafe website">
+
                             View Website →
+
                         </a>
 
                     </div>
@@ -603,9 +686,11 @@
 
 
                         <p class="project-description">
+
                             Modern one-page medical website with
                             responsive design, WhatsApp, Instagram,
                             Google Maps and a mobile-friendly experience.
+
                         </p>
 
 
@@ -613,7 +698,9 @@
                            target="_blank"
                            rel="noopener noreferrer"
                            aria-label="View Shri Samarth Medical website">
+
                             View Website →
+
                         </a>
 
                     </div>
@@ -631,7 +718,8 @@
              SERVICES
         ================================= -->
 
-        <section class="section" id="services">
+        <section class="section"
+                 id="services">
 
             <div class="section-label">
                 SERVICES
@@ -639,7 +727,13 @@
 
 
             <h2 class="section-title">
-                Professional <span>web design services.</span>
+
+                Professional
+
+                <span>
+                    web design services.
+                </span>
+
             </h2>
 
 
@@ -648,7 +742,9 @@
 
                 <div class="service">
 
-                    <span>01</span>
+                    <span>
+                        01
+                    </span>
 
                     <div>
 
@@ -657,9 +753,11 @@
                         </h3>
 
                         <p>
+
                             Professional responsive websites for
                             businesses and local brands looking to
                             build a strong online presence.
+
                         </p>
 
                     </div>
@@ -670,7 +768,9 @@
 
                 <div class="service">
 
-                    <span>02</span>
+                    <span>
+                        02
+                    </span>
 
                     <div>
 
@@ -679,8 +779,10 @@
                         </h3>
 
                         <p>
+
                             High-impact landing pages designed to
                             present products, services and offers clearly.
+
                         </p>
 
                     </div>
@@ -691,7 +793,9 @@
 
                 <div class="service">
 
-                    <span>03</span>
+                    <span>
+                        03
+                    </span>
 
                     <div>
 
@@ -700,8 +804,10 @@
                         </h3>
 
                         <p>
+
                             Modern portfolio websites for creators,
                             freelancers and professionals.
+
                         </p>
 
                     </div>
@@ -712,7 +818,9 @@
 
                 <div class="service">
 
-                    <span>04</span>
+                    <span>
+                        04
+                    </span>
 
                     <div>
 
@@ -721,8 +829,10 @@
                         </h3>
 
                         <p>
+
                             Modern redesigns for outdated websites
                             with improved usability and responsive layouts.
+
                         </p>
 
                     </div>
@@ -733,382 +843,371 @@
             </div>
 
         </section>
-        
-<!-- ================================
-     PRICING
-================================ -->
-
-<section class="section" id="pricing">
-
-    <div class="section-label">
-        PRICING
-    </div>
-
-    <h2 class="section-title">
-        Simple <span>website packages.</span>
-    </h2>
-
-    <p class="pricing-intro">
-        Choose the right website package for your business.
-        Every website is designed to be modern, responsive
-        and built for a stronger online presence.
-    </p>
 
 
-    <!-- PRICING IMAGE -->
 
-    <div class="pricing-image-wrapper">
+        <!-- ================================
+             PRICING
+        ================================= -->
 
-        <img src="pricing/pricing.jpg"
-             alt="Harsh Web Designer website pricing packages"
-             class="pricing-image">
+        <section class="section"
+                 id="pricing">
 
-    </div>
-
-
-    <!-- WEBSITE PACKAGES -->
-
-    <div class="pricing-grid">
-
-
-        <!-- STARTER -->
-
-        <div class="pricing-card">
-
-            <span class="pricing-number">
-                01
-            </span>
-
-            <h3>
-                Starter
-            </h3>
-
-            <p class="pricing-type">
-                PERFECT FOR SMALL BUSINESSES
-            </p>
-
-            <div class="pricing-price">
-                ₹2,500
+            <div class="section-label">
+                PRICING
             </div>
 
-            <p class="pricing-onetime">
-                ONE TIME
+
+            <h2 class="section-title">
+
+                Simple
+
+                <span>
+                    website packages.
+                </span>
+
+            </h2>
+
+
+            <p class="pricing-intro">
+
+                Choose the right website package for your business.
+                Every website is designed to be modern, responsive
+                and built for a stronger online presence.
+
             </p>
 
-            <ul>
 
-                <li>1 Page Website</li>
-                <li>WhatsApp Button</li>
-                <li>Instagram Link</li>
-                <li>Google Maps Integration</li>
-                <li>Mobile Responsive Design</li>
+            <!-- PRICING IMAGE -->
 
-            </ul>
+<div class="pricing-image-wrapper">
 
-            <a href="https://wa.me/919987475783?text=Hello%20Harsh%2C%20I%20am%20interested%20in%20the%20Starter%20website%20package."
-               class="pricing-btn"
-               target="_blank"
-               rel="noopener noreferrer">
-                Choose Starter →
-            </a>
+    <img src="assets/pricing.jpg"
+         alt="Harsh Web Designer website pricing packages"
+         class="pricing-image">
 
+</div>
+
+
+<!-- WEBSITE PACKAGES -->
+
+<div class="pricing-grid">
+
+    <!-- STARTER -->
+
+    <div class="pricing-card">
+
+        <span class="pricing-number">
+            01
+        </span>
+
+        <h3>Starter</h3>
+
+        <p class="pricing-type">
+            PERFECT FOR SMALL BUSINESSES
+        </p>
+
+        <div class="pricing-price">
+            ₹2,500
         </div>
 
+        <p class="pricing-onetime">
+            ONE TIME
+        </p>
 
-        <!-- BUSINESS -->
+        <ul>
+            <li>1 Page Website</li>
+            <li>WhatsApp Button</li>
+            <li>Instagram Link</li>
+            <li>Google Maps Integration</li>
+            <li>Mobile Responsive Design</li>
+        </ul>
 
-        <div class="pricing-card">
+        <a href="https://wa.me/919987475783?text=Hello%20Harsh%2C%20I%20am%20interested%20in%20the%20Starter%20website%20package."
+           class="pricing-btn"
+           target="_blank"
+           rel="noopener noreferrer">
 
-            <span class="pricing-number">
-                02
-            </span>
+            Choose Starter →
 
-            <h3>
-                Business
-            </h3>
-
-            <p class="pricing-type">
-                BEST FOR GROWING BUSINESSES
-            </p>
-
-            <div class="pricing-price">
-                ₹5,000
-            </div>
-
-            <p class="pricing-onetime">
-                ONE TIME
-            </p>
-
-            <ul>
-
-                <li>4–5 Sections / Pages</li>
-                <li>Gallery / Portfolio</li>
-                <li>Services / Menu</li>
-                <li>WhatsApp Button</li>
-                <li>Google Maps Integration</li>
-                <li>Instagram Link</li>
-                <li>Basic SEO Setup</li>
-
-            </ul>
-
-            <a href="https://wa.me/919987475783?text=Hello%20Harsh%2C%20I%20am%20interested%20in%20the%20Business%20website%20package."
-               class="pricing-btn"
-               target="_blank"
-               rel="noopener noreferrer">
-                Choose Business →
-            </a>
-
-        </div>
-
-
-        <!-- PROFESSIONAL -->
-
-        <div class="pricing-card featured">
-
-            <div class="pricing-badge">
-                MOST POPULAR
-            </div>
-
-            <span class="pricing-number">
-                03
-            </span>
-
-            <h3>
-                Professional 
-            </h3>
-
-            <p class="pricing-type">
-                ADVANCED BUSINESS WEBSITE
-            </p>
-
-            <div class="pricing-price">
-                ₹8,000
-            </div>
-
-            <p class="pricing-onetime">
-                ONE TIME
-            </p>
-
-            <ul>
-
-                <li>Custom Professional Design</li>
-                <li>All Business Features</li>
-                <li>Booking / Appointment System</li>
-                <li>Lead / Enquiry Form</li>
-                <li>Advanced SEO Setup</li>
-                <li>Website Analytics</li>
-                <li>30 Days Support</li>
-
-            </ul>
-
-            <a href="https://wa.me/919987475783?text=Hello%20Harsh%2C%20I%20am%20interested%20in%20the%20Premium%20website%20package."
-               class="pricing-btn"
-               target="_blank"
-               rel="noopener noreferrer">
-                Choose Professional →
-            </a>
-
-        </div>
-
-
-        <!-- PREMIUM -->
-
-        <div class="pricing-card">
-
-            <span class="pricing-number">
-                04
-            </span>
-
-            <h3>
-                Premium 
-            </h3>
-
-            <p class="pricing-type">
-                UNIQUE & ADVANCED REQUIREMENTS
-            </p>
-
-            <div class="pricing-price">
-                ₹10,000+
-            </div>
-
-            <p class="pricing-onetime">
-                ONE TIME
-            </p>
-
-            <ul>
-
-                <li>E-commerce Website</li>
-                <li>Custom Functionality</li>
-                <li>Advanced Integrations</li>
-                <li>Admin Dashboard</li>
-                <li>Inventory / Product Management</li>
-                <li>Payment Gateway</li>
-                <li>Ongoing Support</li>
-
-            </ul>
-
-            <a href="https://wa.me/919987475783?text=Hello%20Harsh%2C%20I%20need%20a%20custom%20website%20and%20would%20like%20to%20discuss%20my%20requirements."
-               class="pricing-btn"
-               target="_blank"
-               rel="noopener noreferrer">
-                Choose Premium→
-            </a>
-
-        </div>
-
+        </a>
 
     </div>
 
 
-    <!-- ADDITIONAL SERVICES -->
+    <!-- BUSINESS -->
 
-    <div class="additional-services">
+    <div class="pricing-card">
 
-        <div class="additional-heading">
+        <span class="pricing-number">
+            02
+        </span>
 
-            <h3>
-                Additional Services
-            </h3>
+        <h3>Business</h3>
+
+        <p class="pricing-type">
+            BEST FOR GROWING BUSINESSES
+        </p>
+
+        <div class="pricing-price">
+            ₹5,000
+        </div>
+
+        <p class="pricing-onetime">
+            ONE TIME
+        </p>
+
+        <ul>
+            <li>4–5 Sections / Pages</li>
+            <li>Gallery / Portfolio</li>
+            <li>Services / Menu</li>
+            <li>WhatsApp Button</li>
+            <li>Google Maps Integration</li>
+            <li>Instagram Link</li>
+            <li>Basic SEO Setup</li>
+        </ul>
+
+        <a href="https://wa.me/919987475783?text=Hello%20Harsh%2C%20I%20am%20interested%20in%20the%20Business%20website%20package."
+           class="pricing-btn"
+           target="_blank"
+           rel="noopener noreferrer">
+
+            Choose Business →
+
+        </a>
+
+    </div>
+
+
+    <!-- PROFESSIONAL -->
+
+    <div class="pricing-card featured">
+
+        <div class="pricing-badge">
+            MOST POPULAR
+        </div>
+
+        <span class="pricing-number">
+            03
+        </span>
+
+        <h3>Professional</h3>
+
+        <p class="pricing-type">
+            ADVANCED BUSINESS WEBSITE
+        </p>
+
+        <div class="pricing-price">
+            ₹8,000
+        </div>
+
+        <p class="pricing-onetime">
+            ONE TIME
+        </p>
+
+        <ul>
+            <li>Custom Professional Design</li>
+            <li>All Business Features</li>
+            <li>Booking / Appointment System</li>
+            <li>Lead / Enquiry Form</li>
+            <li>Advanced SEO Setup</li>
+            <li>Website Analytics</li>
+            <li>30 Days Support</li>
+        </ul>
+
+        <a href="https://wa.me/919987475783?text=Hello%20Harsh%2C%20I%20am%20interested%20in%20the%20Professional%20website%20package."
+           class="pricing-btn"
+           target="_blank"
+           rel="noopener noreferrer">
+
+            Choose Professional →
+
+        </a>
+
+    </div>
+
+
+    <!-- PREMIUM -->
+
+    <div class="pricing-card">
+
+        <span class="pricing-number">
+            04
+        </span>
+
+        <h3>Premium</h3>
+
+        <p class="pricing-type">
+            UNIQUE & ADVANCED REQUIREMENTS
+        </p>
+
+        <div class="pricing-price">
+            ₹10,000+
+        </div>
+
+        <p class="pricing-onetime">
+            ONE TIME
+        </p>
+
+        <ul>
+            <li>E-commerce Website</li>
+            <li>Custom Functionality</li>
+            <li>Advanced Integrations</li>
+            <li>Admin Dashboard</li>
+            <li>Inventory / Product Management</li>
+            <li>Payment Gateway</li>
+            <li>Ongoing Support</li>
+        </ul>
+
+        <a href="https://wa.me/919987475783?text=Hello%20Harsh%2C%20I%20need%20a%20custom%20website%20and%20would%20like%20to%20discuss%20my%20requirements."
+           class="pricing-btn"
+           target="_blank"
+           rel="noopener noreferrer">
+
+            Choose Premium →
+
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- ADDITIONAL SERVICES -->
+
+<div class="additional-services">
+
+    <div class="additional-heading">
+
+        <h3>Additional Services</h3>
+
+        <p>
+            Make your website work even harder.
+        </p>
+
+    </div>
+
+
+    <div class="additional-grid">
+
+        <!-- DOMAIN -->
+
+        <div class="additional-card">
+
+            <div class="additional-icon">
+                🌐
+            </div>
+
+            <h4>Domain Setup</h4>
+
+            <div class="additional-price">
+                ₹999/year onwards
+            </div>
 
             <p>
-                Make your website work even harder.
+                Your domain, your brand.
             </p>
 
         </div>
 
 
-        <div class="additional-grid">
+        <!-- MAINTENANCE -->
 
+        <div class="additional-card">
 
-            <!-- DOMAIN -->
-
-            <div class="additional-card">
-
-                <div class="additional-icon">
-                    🌐
-                </div>
-
-                <h4>
-                    Domain Setup
-                </h4>
-
-                <div class="additional-price">
-                    ₹999/year onwards
-                </div>
-
-                <p>
-                    Your domain, your brand.
-                </p>
-
+            <div class="additional-icon">
+                ⚙
             </div>
 
+            <h4>Website Maintenance</h4>
 
-            <!-- MAINTENANCE -->
-
-            <div class="additional-card">
-
-                <div class="additional-icon">
-                    ⚙
-                </div>
-
-                <h4>
-                    Website Maintenance
-                </h4>
-
-                <div class="additional-price">
-                    ₹699/month
-                </div>
-
-                <p>
-                    Updates, fixes & monitoring.
-                </p>
-
+            <div class="additional-price">
+                ₹699/month
             </div>
 
+            <p>
+                Updates, fixes & monitoring.
+            </p>
 
-            <!-- LOCAL SEO -->
+        </div>
 
-            <div class="additional-card">
 
-                <div class="additional-icon">
-                    🔍
-                </div>
+        <!-- LOCAL SEO -->
 
-                <h4>
-                    Local SEO
-                </h4>
+        <div class="additional-card">
 
-                <div class="additional-price">
-                    ₹1,499/month
-                </div>
-
-                <p>
-                    Get found by local customers.
-                </p>
-
+            <div class="additional-icon">
+                🔍
             </div>
 
+            <h4>Local SEO</h4>
 
-            <!-- GOOGLE BUSINESS -->
-
-            <div class="additional-card">
-
-                <div class="additional-icon">
-                    📍
-                </div>
-
-                <h4>
-                    Google Business Profile
-                </h4>
-
-                <div class="additional-price">
-                    ₹1,999
-                </div>
-
-                <p>
-                    More visibility & calls.
-                </p>
-
+            <div class="additional-price">
+                ₹1,499/month
             </div>
 
+            <p>
+                Get found by local customers.
+            </p>
 
-            <!-- WHATSAPP BUSINESS -->
+        </div>
 
-            <div class="additional-card">
 
-                <div class="additional-icon">
-                    💬
-                </div>
+        <!-- GOOGLE BUSINESS -->
 
-                <h4>
-                    WhatsApp Business Setup
-                </h4>
+        <div class="additional-card">
 
-                <div class="additional-price">
-                    ₹999
-                </div>
-
-                <p>
-                    Set up customer enquiries.
-                </p>
-
+            <div class="additional-icon">
+                📍
             </div>
 
+            <h4>Google Business Profile</h4>
+
+            <div class="additional-price">
+                ₹1,999
+            </div>
+
+            <p>
+                More visibility & calls.
+            </p>
+
+        </div>
+
+
+        <!-- WHATSAPP BUSINESS -->
+
+        <div class="additional-card">
+
+            <div class="additional-icon">
+                💬
+            </div>
+
+            <h4>WhatsApp Business Setup</h4>
+
+            <div class="additional-price">
+                ₹999
+            </div>
+
+            <p>
+                Set up customer enquiries.
+            </p>
 
         </div>
 
     </div>
 
+</div>
 
-    <p class="pricing-note">
-        * Final pricing may vary depending on website requirements,
-        content, functionality and additional features.
-    </p>
+
+<p class="pricing-note">
+    * Final pricing may vary depending on website requirements,
+    content, functionality and additional features.
+</p>
 
 </section>
 
 
-        <!-- ================================
+<!-- ================================
      PROCESS
 ================================= -->
 
@@ -1118,22 +1217,17 @@
         PROCESS
     </div>
 
-
     <h2 class="section-title">
         From idea to <span>launch.</span>
     </h2>
 
-
     <div class="process-grid">
-
 
         <div class="process-card">
 
             <span>01</span>
 
-            <h3>
-                Discover
-            </h3>
+            <h3>Discover</h3>
 
             <p>
                 Understand the business idea, target audience
@@ -1143,14 +1237,11 @@
         </div>
 
 
-
         <div class="process-card">
 
             <span>02</span>
 
-            <h3>
-                Design
-            </h3>
+            <h3>Design</h3>
 
             <p>
                 Create the visual direction, structure and
@@ -1160,14 +1251,11 @@
         </div>
 
 
-
         <div class="process-card">
 
             <span>03</span>
 
-            <h3>
-                Develop
-            </h3>
+            <h3>Develop</h3>
 
             <p>
                 Build a responsive website using modern
@@ -1177,14 +1265,11 @@
         </div>
 
 
-
         <div class="process-card">
 
             <span>04</span>
 
-            <h3>
-                Launch
-            </h3>
+            <h3>Launch</h3>
 
             <p>
                 Test, optimize and publish the finished website.
@@ -1192,30 +1277,25 @@
 
         </div>
 
-
     </div>
 
 </section>
-
 
 
 <!-- ================================
      CONTACT
 ================================= -->
 
-<section class="section contact-section"
-         id="contact">
+<section class="section contact-section" id="contact">
 
     <div class="section-label">
         HAVE A PROJECT?
     </div>
 
-
     <h2 class="section-title">
         LET'S BUILD
         <span>SOMETHING.</span>
     </h2>
-
 
     <p>
         Have a website project in mind?
@@ -1230,19 +1310,25 @@
            class="primary-btn"
            target="_blank"
            rel="noopener noreferrer">
+
             WhatsApp Me →
+
         </a>
 
 
         <a href="mailto:harshwardhankdm@gmail.com"
            class="secondary-btn">
+
             Email Me
+
         </a>
 
 
         <a href="tel:+919987475783"
            class="secondary-btn">
+
             Call Me
+
         </a>
 
     </div>
@@ -1250,7 +1336,6 @@
 </section>
 
 </main>
-
 
 
 <!-- ================================
@@ -1261,7 +1346,7 @@
 
     <div class="footer-logo">
 
-        <img src="logo.jpeg"
+        <img src="assets/logo.jpeg"
              alt="Harsh Web Designer Logo"
              class="brand-logo">
 
@@ -1283,7 +1368,6 @@
     </div>
 
 </footer>
-
 
 
 <!-- ================================
